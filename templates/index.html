@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Occupancy Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Current Occupancy Status</h1>
+        <div class="alert alert-info mt-3">
+            <p><strong>Event:</strong> {{ latest_event['event'] }}</p>
+            <p><strong>Timestamp:</strong> {{ latest_event['timestamp'] }}</p>
+        </div>
+        <a class="btn btn-primary mt-3" href="{{ url_for('history') }}">View History</a>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Sensor Logs</title>
+</head>
+<body>
+    <h1>Motion Sensor Logs</h1>
+    <form action="{{ url_for('add_log') }}" method="post">
+        <input type="text" name="status" placeholder="Enter log status">
+        <button type="submit">Add Log</button>
+    </form>
+    <ul>
+        {% for log in logs %}
+            <li>{{ log.timestamp }} - {{ log.status }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

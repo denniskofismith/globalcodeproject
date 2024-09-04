@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Availability</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Class Availability</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Available Classes</h2>
+                {% if available_classes %}
+                    {% for timestamp, status in available_classes %}
+                        <div class="card mb-3">
+                            <img src="/static/images/2023_12_19_15_10_IMG_5034.PNG" class="card-img-top" alt="Class Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Class Available</h5>
+                                <p class="card-text">Status: {{ status }}</p>
+                                <p class="card-text"><small class="text-muted">Last checked: {{ timestamp }}</small></p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No available classes at the moment.</p>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <h2>Unavailable Classes</h2>
+                {% if unavailable_classes %}
+                    {% for timestamp, status in unavailable_classes %}
+                        <div class="card mb-3">
+                            <img src="/static/images/2023_12_19_15_10_IMG_5034.PNG" class="card-img-top" alt="Class Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Class Unavailable</h5>
+                                <p class="card-text">Status: {{ status }}</p>
+                                <p class="card-text"><small class="text-muted">Last checked: {{ timestamp }}</small></p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>All classes are currently available.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Availability</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+        }
+        .available {
+            border: 2px solid green;
+        }
+        .unavailable {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Classroom Availability</h1>
+        <div class="row" id="classroom-container">
+            <!-- Cards will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html> -->

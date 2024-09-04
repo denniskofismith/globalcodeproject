@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Status</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .available {
+            border: 2px solid green;
+        }
+        .unavailable {
+            border: 2px solid red;
+        }
+        .card-img-top {
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .timestamp {
+            font-size: 0.9rem;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Class Status</h1>
+<<<<<<< HEAD
+        <div class="card {{ 'available' if class_status == 'Class Available' else 'unavailable' }}">
+        <!-- <div class="card {% if class_status == 'Class Available' %}available{% else %}unavailable{% endif %}"></div> -->
+            <img src="/static/images/2023_12_19_15_10_IMG_5034.PNG" class="card-mg-top" alt="Classroom Image">
+            <div class="card-body">i
+=======
+        <!-- <div class="card {{ 'available' if class_status == 'Class Available' else 'unavailable' }}"> -->
+        <div class="card {% if class_status == 'Class Available' %}available{% else %}unavailable{% endif %}"></div>
+            <img src="/static/images/2023_12_19_15_10_IMG_5034.PNG" class="card-img-top" alt="Classroom Image">
+            <div class="card-body">
+>>>>>>> 876e62c6d46ecce47c56b345cd3b1ee36c80d8dd
+                <h5 class="card-title">Classroom</h5>
+                <p class="card-text">{{ class_status }}</p>
+                <p class="timestamp"><strong>Last Updated:</strong> {{ timestamp }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
